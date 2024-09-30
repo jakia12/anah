@@ -73,7 +73,7 @@
 
     <script
         data-url="https://static.parastorage.com/services/wix-thunderbolt/dist/handleAccessTokens.inline.5a67b563.bundle.min.js">!function () { "use strict"; const e = e => "string" == typeof e ? decodeURIComponent(e).toLowerCase().trimStart() : e, t = "client-session-bind", o = "client-binding", s = "tbReady", r = "security_overrideGlobals", n = [t, o, "svSession", "smSession", "server-session-bind", "wixSession2"].map((e => e.toLowerCase())), i = Object.getOwnPropertyDescriptor(Document.prototype, "cookie"), { isExcludedFromSecurityExperiments: c, experiments: a, siteFeaturesConfigs: d, accessTokensUrl: l } = window.viewerModel, m = l, u = document.cookie.split(";").map((e => e.trim())).filter((e => e.startsWith(t)))[0]?.split("=")[1], p = {}; if (u && (p[o] = u, (() => { const e = `${t}=; domain=${location.hostname}; max-age=0; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT`; i.set.call(document, e) })()), a["specs.thunderbolt.hardenFetchAndXHR"] && !c) { let w = fetch; function f(e) { const { logger: t } = e.detail; try { window.tb.init({ fetch: w, fetchHeaders: p }) } catch (e) { const o = new Error("TB003"); t.captureError(o, { tags: { feature: "thunderbolt-security" } }), t.meter(`${r}_${o.message}`, { paramsOverrides: { evid: "26", errorType: r, eventString: o.message } }), window?.viewerModel?.mode.debug && console.error(e) } finally { removeEventListener(s, f), w = fetch } } addEventListener(s, f) } else window.fetchDynamicModel = () => d.sessionManager.isRunningInDifferentSiteContext ? Promise.resolve({}) : fetch(m, { credentials: "same-origin", headers: p }).then((function (e) { if (!e.ok) throw new Error(`[${e.status}]${e.statusText}`); return e.json() })), window.dynamicModelPromise = window.fetchDynamicModel(); a["specs.thunderbolt.hardenCookieAccess"] && Object.defineProperty(document, "cookie", { get() { return i.get.call(document).split(";").filter((t => { const o = e(t.split("=")[0]); return !n.map((e => e.toLowerCase())).includes(o) })).join(";").trimStart() }, set(t) { const o = e(t.split(";")[0]); n.every((e => !o.startsWith(e.toLowerCase()))) && i.set.call(document, t) }, enumerable: !0, configurable: !1 }) }();
-            //# sourceMappingURL=https://static.parastorage.com/services/wix-thunderbolt/dist/handleAccessTokens.inline.5a67b563.bundle.min.js.map</script>
+            </script>
 
 
     <script>
@@ -6108,14 +6108,14 @@
         }
     </style>
     <title>ANAH LE NOM</title>
-    //
-    <meta property="og:image" //
+    
+    <meta property="og:image" 
         content="https://static.wixstatic.com/media/971233_90668d2421254bff94463685a782bdb4~mv2.png/v1/fill/w_1746,h_1002,al_c/971233_90668d2421254bff94463685a782bdb4~mv2.png" />
-    //
-    <script //
+    
+    <script 
         type="application/ld+json">{"@context":"https://schema.org/","@type":"WebSite","name":"Hana","url":"https://www.hanaeth.com"}</script>
-    //
-    <meta name="twitter:image" //
+    
+    <meta name="twitter:image" 
         content="https://static.wixstatic.com/media/971233_90668d2421254bff94463685a782bdb4~mv2.png/v1/fill/w_1746,h_1002,al_c/971233_90668d2421254bff94463685a782bdb4~mv2.png" />
 
 </head>
@@ -19347,8 +19347,6 @@
                                                     </div>
                                                 </div>
                                             </section>
-
-                                            // Scrolling
                                             
                                             <section id="comp-m1mejqbc" tabindex="-1"
                                                 data-block-level-container="Section"
@@ -19726,7 +19724,6 @@
             typeof Array.from === 'undefined' ||
             typeof Symbol === 'undefined'
         ) {
-            // send bi in order to detect the browsers in which polyfills are not working
             window.fedops.phaseStarted('missing_polyfills')
         }
     </script>
